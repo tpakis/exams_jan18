@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements PlacesAdapter.Pla
                 if (response.isSuccessful()) {
                     data = response.body().getResults();
                     for (Place item : data) {
-                        if (item.getOpeningHours() != null) {
+                        if (item.getOpeningHours() == null) {
                             Log.d("MainActivity", "succesfull json load");
                         } else {
                            viewModel.addPlace(item);
