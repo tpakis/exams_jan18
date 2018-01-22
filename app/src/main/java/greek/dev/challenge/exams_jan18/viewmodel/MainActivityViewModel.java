@@ -29,6 +29,9 @@ public class MainActivityViewModel extends ViewModel {
         }
         return itemsListObservable;
     }
+    public boolean getInternetState() {
+        return this.internetState;
+    }
     public void addPlace(Place place){
         ArrayList<Place> placesListTemp;
         placesListTemp = itemsListObservable.getValue();

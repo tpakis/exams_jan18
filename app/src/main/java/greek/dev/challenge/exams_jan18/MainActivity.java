@@ -89,12 +89,16 @@ public class MainActivity extends AppCompatActivity implements PlacesAdapter.Pla
     }
     @OnClick(R.id.search_button)
     public void startQuery(View view) {
-        String query = mSearchQueryText.getText().toString();
-        if (query.length() > 0) {
-            query = query.replace(' ', '+');
-            loadAnswers(query);
-        } else {
-            Toast.makeText(MainActivity.this, errorquery, Toast.LENGTH_SHORT).show();
+        if(viewModel.getInternetState()) {
+            String query = mSearchQueryText.getText().toString();
+            if (query.length() > 0) {
+                query = query.replace(' ', '+');
+                loadAnswers(query);
+            } else {
+                Toast.makeText(MainActivity.this, errorquery, Toast.LENGTH_SHORT).show();
+            }
+        }else{
+            Toast.makeText(MainActivity.this, "No internet", Toast.LENGTH_SHORT).show();
         }
     }
     public void loadAnswers(String query) {
