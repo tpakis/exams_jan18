@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Exams_Jan18</string>
+    <string name="text_hint">Enter your query</string>
+    <string name="search_button">Search</string>
+    <string name="error_query">Please enter a text Query</string>
+    <string name="empty_view">No results to show</string>
+    <dimen name="tiny_font_size">10sp</dimen>
+    <dimen name="small_font_size">12sp</dimen>
+    <dimen name="medium_font_size">16sp</dimen>
+    <dimen name="large_font_size">20sp</dimen>
+    <dimen name="huge_font_size">24sp</dimen>
+    <dimen name="social_font_size">50sp</dimen>
+</resources>
